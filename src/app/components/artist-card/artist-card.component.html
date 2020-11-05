@@ -1,0 +1,29 @@
+<div class="card-columns">
+    <!-- Card -->
+  <div *ngFor="let item of items" class="card" (click)="showArtist(item)">
+  
+      <!-- Card image -->
+      <div  cli class="view overlay">
+        <img class="card-img-top" [src]="item.images | noimage"
+          alt="Card image cap">
+          <div class="mask rgba-white-slight"></div>
+      </div>
+    
+      <!-- Card content -->
+      <div class="card-body">
+    
+        <!-- Title -->
+        <h4 class="card-title">
+            {{item.name}}
+        </h4>
+        <!-- Text -->
+        <p class="card-text">
+          <span *ngFor="let artist of item.artists" class="badge badge-success">
+              {{artist.name}}
+          </span>
+        </p>
+      </div>
+    
+    </div>
+    <!-- Card -->
+  </div>

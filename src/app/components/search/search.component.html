@@ -1,0 +1,9 @@
+<div class="md-form input-with-post-icon">
+  <i class="fas fa-search input-prefix"></i>
+  <input #searchText (keyup)="getArtists(searchText.value)" type="text" id="suffixInside" class="form-control" autocomplete="off">
+  <label for="suffixInside">Buscar artista</label>
+</div>
+
+<app-loading *ngIf="loading"></app-loading>
+
+<app-artist-card [items]="artists"></app-artist-card>

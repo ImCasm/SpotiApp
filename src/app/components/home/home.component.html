@@ -1,0 +1,13 @@
+<app-loading *ngIf="loading"></app-loading>
+
+<div class="alert alert-danger" *ngIf="error">
+    <h3>Error</h3>
+    <p>{{error.message}}</p>
+</div>
+
+<div class="row">
+    <div class="col">
+        <h1>Nuevos lanzamientos</h1>
+    </div>
+</div>
+<app-artist-card [items]="newReleases"></app-artist-card>
